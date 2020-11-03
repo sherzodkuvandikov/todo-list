@@ -1,12 +1,19 @@
 var mainForm = document.querySelector('.main-form');
-var mainInput = mainForm.querySelector('.main-input').value;
-var mainCheckbox = mainForm.querySelector('.main-checkbox').value;
+var mainCheckbox = mainForm.querySelector('.main-checkbox');
 var mainList = document.querySelector('.main-list');
+var toDoList = [];
 
 mainForm.addEventListener('submit', function(evt) {
   evt.preventDefault();
 
+  var mainInput = mainForm.querySelector('.main-input').value;
 
+  if (mainCheckbox.checked) {
+    toDoList.unshift(mainInput);
 
-  console.log();
+  } else {
+    toDoList.push(mainInput);
+  }
+
+  console.log(toDoList);
 })
