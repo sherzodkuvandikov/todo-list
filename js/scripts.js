@@ -8,6 +8,10 @@ mainForm.addEventListener('submit', function(evt) {
 
   var mainInput = mainForm.querySelector('.main-input').value;
 
+  if (mainInput === '') {``
+    alert('Bo\'sh qoldirmang !!!');
+    return 'Bo\'sh qoldirmang !!!';
+  }
 
   if (toDoList.includes(mainInput)) {
     alert('Yozilgan bu allaqachon')
