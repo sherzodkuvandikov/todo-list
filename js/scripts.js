@@ -8,6 +8,7 @@ mainForm.addEventListener('submit', function(evt) {
 
   var mainInput = mainForm.querySelector('.main-input').value;
 
+
   if (toDoList.includes(mainInput)) {
     alert('Yozilgan bu allaqachon')
     return('This word exists !');
